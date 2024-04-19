@@ -8,7 +8,7 @@ body {
   background-image: url(../public/desert.jpg);
   background-size: cover;
   width: 100%;
-  overflow: 'hidden';
+  overflow: hidden;
 }
 
 code {

@@ -3,7 +3,7 @@ import {Animated} from "react-animated-css";
 import './App.css';
 
 
-const Star = ({ size, color, info, x, y }) => {
+const Star = ({ size, color, info, x, y,time }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   const handleMouseEnter = () => {
@@ -24,7 +24,7 @@ const Star = ({ size, color, info, x, y }) => {
         left: `${x}vw`,
         top: `${y}vh`,
         zIndex: !showInfo ? 100 : 120,
-        animation: !showInfo ? 'blink 2s infinite' : 'none', 
+        animation: !showInfo ? `blink ${time}s infinite` : 'none', 
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -43,7 +43,7 @@ const Star = ({ size, color, info, x, y }) => {
 function App() {
   let stars = [];
   for(let i = 0; i < 50; i++){
-    stars.push({x: Math.random() * 100, y: Math.random() * 50, size:Math.random() * 40 ,  color: `#${Math.floor(Math.random() * 16777215).toString(16)}`, info: `Star ${i}`})
+    stars.push({x: Math.random() * 100, y: Math.random() * 50, size:Math.random() * 40 ,  color: `#${Math.floor(Math.random() * 16777215).toString(16)}`, info: `Star ${i}`, time: Math.floor(Math.random() * 5 + 1)})
   }
 
   return (
@@ -61,6 +61,7 @@ function App() {
             info={star.info}
             x={star.x}
             y={star.y}
+            time={star.time}
           />
         ))}
       </div>

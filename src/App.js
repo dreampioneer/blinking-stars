@@ -30,11 +30,11 @@ const Star = ({ size, color, info, x, y }) => {
       onMouseLeave={handleMouseLeave}
     >
       <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill={color}><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-      <Animated animationIn="rubberBand" animationOut="fadeOut" isVisible={showInfo}>
+      {showInfo ? <Animated animationIn="rubberBand" animationOut="fadeOut" isVisible={showInfo}>
         <div style={{ display:'flex', justifyContent: 'center', zIndex: 120 }}>
           <p style={{ margin: '10px 0px 0px 0px', backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: '1.5rem', padding: '0 .5rem', width: 'min-content', color: color, fontSize: `${size}px`, display: 'flex', justifyContent: 'center', textWrap: 'nowrap', fontWeight: '700'  }}>{info}</p>
         </div>
-      </Animated>
+      </Animated> : null}
     </div>
   );
 };

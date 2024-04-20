@@ -68,7 +68,7 @@ function App() {
   return (
     <div style={{width: '100%', overflow: 'hidden' }}>
       <div style={{ width: '100%', overflow: 'hidden', height: '50vh'}}>
-        <div style={{ position: 'absolute', top: '100px', left: '100px', zIndex: 110 }}>
+        <div style={{ position: 'absolute', top: '100px', left: '100px', zIndex: 110, transform: 'rotate(-30deg)' }}>
           <svg fill="#F6F1D5" height="100" width="100" version="1.1" viewBox="0 0 506.616 506.616">
             <defs>
               <filter id="blur">

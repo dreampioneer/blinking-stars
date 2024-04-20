@@ -29,19 +29,26 @@ const Star = ({ size, color, info, x, y,time }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 256 256" color={color} style={{ textShadow: '10px 20px 30px blue' }}>
+      {/* <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 256 256" color={color} style={{ textShadow: '10px 20px 30px blue' }}>
         <defs>
             <filter id="blur">
                 <feGaussianBlur stdDeviation="10" />
             </filter>
         </defs>
         <path className='blur' fill={color} d="M128,10c0,0,11.8,64.3,24.4,80.6c12.5,16.4,54,36.3,54,36.3s-35.4,13.6-54,36.3C138.1,178.3,128,246,128,246s-11.2-60.7-23.8-82.8c-12.5-22.1-54.6-36.3-54.6-36.3s36.6-11.2,54.6-36.3C122.2,65.5,128,10,128,10z"/>
-      </svg>
-      {showInfo ? <Animated animationIn="rubberBand" animationOut="fadeOut" isVisible={showInfo}>
+      </svg> */}
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width={size} height={size} color={color} viewBox="0 0 100 125" >
+        <defs>
+          <filter id="blur">
+              <feGaussianBlur stdDeviation="3" />
+          </filter>
+        </defs>
+        <path className='blur' fill={color} d="M90.2,50L90.2,50l0,0.3c-10.4,0-20.2,1-27.6,2.8c0,0-0.1,0-0.1,0c-4.5,1.1-8,4.6-9.1,9.1c0,0,0,0.1,0,0.1   c-1.9,7.4-2.9,17.2-2.8,27.6l-0.2,0h-0.1l-0.2,0c0-10.4-1-20.2-2.8-27.6c0,0,0-0.1,0-0.1c-1.1-4.5-4.7-8-9.1-9.1c0,0-0.1,0-0.1,0   c-7.4-1.9-17.2-2.9-27.6-2.8l0-0.2V50l0-0.2c10.4,0,20.2-1,27.6-2.8c0,0,0.1,0,0.1,0c4.5-1.2,8-4.7,9.1-9.1c0,0,0-0.1,0-0.1   c1.9-7.4,2.9-17.2,2.8-27.6l0.2,0h0.1l0.2,0c0,10.4,1,20.2,2.8,27.6c0,0,0,0.1,0,0.1c1.1,4.5,4.6,8,9.1,9.1c0,0,0.1,0,0.1,0   c7.4,1.9,17.2,2.9,27.6,2.8L90.2,50z"/></svg>
+      {/* {showInfo ? <Animated animationIn="rubberBand" animationOut="fadeOut" isVisible={showInfo}>
         <div style={{ display:'flex', justifyContent: 'center', zIndex: 120 }}>
           <p style={{ margin: '10px 0px 0px 0px', backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: '1.5rem', padding: '0 .5rem', width: 'min-content', color: color, fontSize: `${size}px`, display: 'flex', justifyContent: 'center', textWrap: 'nowrap', fontWeight: '700'  }}>{info}</p>
         </div>
-      </Animated> : null}
+      </Animated> : null} */}
     </div>
   );
 };
@@ -52,8 +59,8 @@ function getRandomNumber(min, max){
 
 function App() {
   let stars = [];
-  for(let i = 0; i < 50; i++){
-    stars.push({x: Math.random() * 100, y: Math.random() * 50, size:Math.random() * 50 ,  color: `#${Math.floor(Math.random() * 16777215).toString(16)}`, info: `Star ${i}`, time: getRandomNumber(5, 10)})
+  for(let i = 0; i < 400; i++){
+    stars.push({x: Math.random() * 100, y: Math.random() * 65, size:Math.random() * 40 ,  color: `#${Math.floor(Math.random() * 16777215).toString(16)}`, info: `Star ${i}`, time: getRandomNumber(5, 10)})
   }
 
 

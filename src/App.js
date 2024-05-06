@@ -44,11 +44,11 @@ const Star = ({ size, color, info, x, y,time }) => {
           </filter>
         </defs>
         <path className='blur' fill={'#FFFFFFBF'} d="M90.2,50L90.2,50l0,0.3c-10.4,0-20.2,1-27.6,2.8c0,0-0.1,0-0.1,0c-4.5,1.1-8,4.6-9.1,9.1c0,0,0,0.1,0,0.1   c-1.9,7.4-2.9,17.2-2.8,27.6l-0.2,0h-0.1l-0.2,0c0-10.4-1-20.2-2.8-27.6c0,0,0-0.1,0-0.1c-1.1-4.5-4.7-8-9.1-9.1c0,0-0.1,0-0.1,0   c-7.4-1.9-17.2-2.9-27.6-2.8l0-0.2V50l0-0.2c10.4,0,20.2-1,27.6-2.8c0,0,0.1,0,0.1,0c4.5-1.2,8-4.7,9.1-9.1c0,0,0-0.1,0-0.1   c1.9-7.4,2.9-17.2,2.8-27.6l0.2,0h0.1l0.2,0c0,10.4,1,20.2,2.8,27.6c0,0,0,0.1,0,0.1c1.1,4.5,4.6,8,9.1,9.1c0,0,0.1,0,0.1,0   c7.4,1.9,17.2,2.9,27.6,2.8L90.2,50z"/></svg>
-      {showInfo ? <Animated animationIn="rubberBand" animationOut="fadeOut" isVisible={showInfo}>
-        <div style={{ display:'flex', justifyContent: 'center', zIndex: 120 }}>
-          <p style={{ margin: '10px 0px 0px 0px', backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: '1.5rem', padding: '0 .5rem', width: 'min-content', color: color, fontSize: `${size}px`, display: 'flex', justifyContent: 'center', textWrap: 'nowrap', fontWeight: '700'  }}>{info}</p>
-        </div>
-      </Animated> : null}
+        {showInfo ? <Animated animationIn="rubberBand" animationOut="fadeOut" isVisible={showInfo}>
+          <div style={{ display:'flex', justifyContent: 'center', zIndex: 120 }}>
+            <p style={{ margin: '10px 0px 0px 0px', backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: '1.5rem', padding: '0 .5rem', width: 'min-content', color: color, fontSize: `${size}px`, display: 'flex', justifyContent: 'center', textWrap: 'nowrap', fontWeight: '700'  }}>{info}</p>
+          </div>
+        </Animated> : null}
     </div>
   );
 };
